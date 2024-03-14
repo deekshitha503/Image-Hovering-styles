@@ -1,0 +1,158 @@
+.card {
+    perspective: 1000px;
+    width: 225px; /* card width */
+    height: 200px; /*card height */
+  }
+  
+  .card-inner1 {
+    width: 225px;
+    height: 200px;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+    }
+  
+  .card:hover .card-inner1 {
+    transform: rotatey(180deg);
+  }
+  
+  .card-front,
+  .card-back {
+     position: absolute;
+    backface-visibility: hidden;
+    border: 2px solid whitesmoke;
+    border-radius: 20px;
+  }
+  
+  .card-back {
+    transform: rotateY(180deg);
+    background-color: bisque;
+    width: 225px;
+    height: 200px;
+  }
+  .card-inner2{
+    width: 300px;
+    height: 300px;
+  }
+  .front{
+    width: 225px
+    ;height: 200px;
+  }
+
+
+/* hovering technique 2 */
+.box2{
+  width: 250px;
+  height: 300px;     
+  position: relative;
+}
+.box2 img{
+  object-fit: cover;
+  opacity: 1;
+  transition: 0.5s ease;
+  border-radius: 20px;
+}
+.text2{  
+  position: absolute;
+  top: 0px;
+  width: 250px;
+  height: 200px;
+  border-radius: 20px;
+  text-align: center;
+  opacity: 0;
+}
+.box2:hover img{
+  opacity: 0.3;
+  transition: all 0.5s;
+}
+.box2:hover .text2{
+  opacity: 0.7;
+  background-color:rgb(175, 237, 175);
+  transition: all 0.5s;
+}
+
+/* hovering technique 3 */
+.box3{
+  width: 250px;
+  height: 200px;    
+  background-position: center;
+  position: relative;
+}
+.text3{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  border-radius: 20px;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  text-align: center;
+  overflow: hidden;
+  opacity: 0.7;
+  visibility: hidden;
+  transition: 1s;
+  background-color: rgb(225,225,225);
+}
+.box3:hover .text3{
+  visibility: visible;
+  height: 200px;
+}
+
+/* hovering technique4 */
+
+.box4{
+  width: 250px;
+  height: 200px;    
+  background-position: center;
+  position: relative;
+}
+.box4 img{
+  object-fit: cover;
+  opacity: 1;
+  transition: 0.5s ease;
+  border-radius: 20px;
+}
+.text4{  
+  position: absolute;
+  top: 0;
+  width: 250px;
+  height: 200px;
+  border-radius: 20px;
+  text-align: center;
+  opacity: 0;
+  overflow: auto;
+  transition: 0.5s ease;
+}
+.box4:hover img{
+  opacity: 0.3;
+  scale: 1.1;
+}
+.box4:hover .text4{
+  opacity: 0.7;
+  background-color:rgb(65, 225, 198);
+  scale: 1.1;
+  opacity: 0.7;
+}
+
+/* hovering technique 5 */
+.box5{
+position: relative;
+overflow: hidden;
+}
+.box5>img{
+  transition: all 0.5s;
+}
+.box5:hover img{
+  filter: brightness(0.5);
+}
+.text5{
+  position: absolute;
+  bottom: -100px;
+  left: 10px;
+  color: white;
+  transition: all 0.5s;
+}
+.box5:hover .text5{
+  bottom: 10px;
+
+}
